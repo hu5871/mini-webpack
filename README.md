@@ -5,8 +5,8 @@
 打包出一个boundle
 dist目录为打包出来的产物
 
-## 后续实现loader、plugins
-.....
+## 实现loader、plugins
+它们很简易，jsonLoader ,htmlWebpackPlugin
 ## 运行
 
 ```bash

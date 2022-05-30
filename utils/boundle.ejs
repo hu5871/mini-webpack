@@ -1,10 +1,11 @@
 (function(modules){
+  const installedModules = {};
   function require(id){
-   
+    if (installedModules[id]) {
+      return installedModules[id].exports;
+  }
     const [fn, mapping] = modules[id]
-    const module = {
-      exports: {},
-    }
+    const module = installedModules[id] = {exports: {}}
     function localRequire(filePath) {
       const id = mapping[filePath]
       return require(id)
